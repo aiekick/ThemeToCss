@@ -1,0 +1,47 @@
+{
+  "name": "themetocss",
+  "displayName": "ThemeToCss",
+  "description": "Extract Current Theme as CSS VSCode Vars",
+  "version": "0.0.1",
+  "publisher": "aiekick",
+  "engines": {
+    "vscode": "^1.98.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:themeToCssVars.extractTheme"
+  ],
+  "repository": {
+    "url": "https://github.com/aiekick/ThemeToCss.git"
+  },
+  "main": "./out/main.js",
+  "icon": "resources/logo.png",
+  "contributes": {
+    "commands": [
+      {
+        "command": "themeToCss.extractTheme",
+        "title": "Extract Current Theme as CSS VSCode Vars"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src"
+  },
+  "devDependencies": {
+    "@types/node": "20.x",
+    "@types/vscode": "^1.98.0",
+    "@typescript-eslint/eslint-plugin": "^8.28.0",
+    "@typescript-eslint/parser": "^8.28.0",
+    "eslint": "^9.23.0",
+    "typescript": "^5.8.2"
+  },
+  "dependencies": {
+    "vsce": "^2.15.0"
+  }
+}
